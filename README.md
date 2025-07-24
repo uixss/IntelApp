@@ -1,3 +1,4 @@
+
 # 📱 IntelApp – Android Pentest & Management Toolkit
 
 **IntelApp** es una suite avanzada en Python que proporciona herramientas para análisis estático, pruebas de penetración, depuración, ingeniería inversa y administración de dispositivos Android mediante ADB y Fastboot.
@@ -76,14 +77,90 @@ Diseñado para analistas, desarrolladores y pentesters, combina automatización 
 
 ---
 
-## 🛠️ Requisitos
+## 🧭 Diagrama de Flujo – Proceso General
 
-- Python 3.6+
-- `apktool` en PATH
-- `adb`, `fastboot`, `frida`
-- Librerías Python:
-  - `androguard==3.3.5`
-  - `rich`
+```mermaid
+flowchart TD
+    A[Inicio] --> B{¿Qué desea hacer?}
 
+    B --> C[Gestionar dispositivo]
+    B --> D[Extraer o manipular APK]
+    B --> E[Analizar seguridad / componentes]
+    B --> F[Inyectar Hook o monitorear]
+
+    C --> C1[Listar / seleccionar dispositivo]
+    C1 --> C2[Reiniciar / EDL / Recovery / Fastboot]
+
+    D --> D1[Listar apps]
+    D1 --> D2[Extraer APK]
+    D2 --> D3[Decompilar / Recompilar / Firmar]
+
+    E --> E1[Análisis de Manifest]
+    E1 --> E2[Análisis de Smali]
+    E2 --> E3[Generación de Exploits]
+    E2 --> E4[Búsqueda de URLs]
+
+    F --> F1[Detectar app activa]
+    F1 --> F2[Inyectar script Frida]
+    F1 --> F3[Monitorear uso de cámara]
+
+    E3 --> Z[Fin]
+    F3 --> Z
+    C2 --> Z
+    D3 --> Z
+```
+
+---
+
+## 🎯 Propósito de IntelApp
+
+**IntelApp** fue diseñado con los siguientes fines:
+
+- 🕵️ Análisis forense móvil  
+- 🔓 Auditoría de seguridad de aplicaciones Android
+- 🛠️ Ingeniería inversa de APKs
+- 🧪 Pruebas de fuzzing e intent spoofing
+- 📶 Gestión avanzada de dispositivos para análisis técnico
+- 🔬 Investigación de malware, spyware y apps sospechosas
+
+---
+
+## 📌 Casos de Uso / Ejemplos
+
+### 1. Análisis de componentes vulnerables
 ```bash
-pip install androguard==3.3.5 rich
+adb shell am start -n com.ejemplo/.ActivityExportada --es secretKey "admin123"
+```
+
+### 2. Buscar URLs sensibles
+```bash
+https://api.invertironline.com/login
+http://dev.iolinversiones.com/test
+```
+
+### 3. Volcado de RAM (requiere root)
+```bash
+Archivo generado en /sdcard/ramdump.bin
+```
+
+### 4. Monitorear uso de cámara
+```bash
+[🎥] 15:02:12 Camera opened: com.spyapp.CameraService
+```
+
+### 5. Inyección Frida para análisis dinámico
+```bash
+frida -U -n com.target.app -l hook.js --no-pause
+```
+
+---
+
+## 🧬 Aplicaciones en Ingeniería Inversa
+
+- Análisis de permisos no documentados
+- Estudio de comportamiento en tiempo de ejecución
+- Identificación de lógica ofuscada o funciones escondidas
+- Inspección de operaciones de ContentProvider
+- Descubrimiento de componentes exportados inadvertidamente
+
+ 
