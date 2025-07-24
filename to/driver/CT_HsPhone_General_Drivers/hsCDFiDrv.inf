@@ -1,0 +1,91 @@
+; hsCDFiDrv.inf
+;
+; Installation inf for the CD-ROM Filter driver
+;
+; Copyright (c) Hisense Corporation
+;
+
+[Version]
+Signature = "$Windows NT$"
+Class     = CDROM
+ClassGUID = {4d36e965-e325-11ce-bfc1-08002be10318}
+Provider  = %LC%
+DriverVer = 07/12/2010,1.01.00
+DriverPackageType=ClassFilter
+CatalogFile = hsCDFiDrv.cat
+
+;
+; General installation section
+;
+
+[DefaultInstall.NT]
+Addreg    = AEDF.NT.AddReg
+CopyFiles = AEDF.NT.Copy
+
+;
+; Service installation section
+;
+
+[AEDF.NT.AddReg]
+HKLM, System\CurrentControlSet\Control\Class\{4d36e965-e325-11ce-bfc1-08002be10318}, UpperFilters, 0x00010008, %Service_Name%
+
+[DefaultInstall.NT.Services]
+AddService = %Service_Name%, , AEDF.Service.Install
+
+[AEDF.Service.Install]
+DisplayName    = %Service_Name%
+Description    = %Service_Desc%
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\%TargetFileName%.sys
+LoadOrderGroup = "PnP Filter"
+AddReg=Products.Supported
+
+[Products.Supported]
+;HKR,,ProductsSupported,0x00010008,"Hisense CD-ROM          "
+HKR,,ProductsSupported,0x00010008,"eSurfing CD-ROM         "
+HKR,,DefaultDelay,0x00010001, 100
+
+[AEDF.NT.Copy]
+%TargetFileName%.sys,hsCDFiDrv.sys,,COPYFLG_OVERWRITE_OLDER_ONLY
+
+[DestinationDirs]
+AEDF.NT.Copy = 12
+AEDF.NT.DelFile = 12
+
+[SourceDisksNames]
+1=%Pro.Disk%,,,
+
+[SourceDisksFiles]
+hsCDFiDrv.sys=10000
+
+[SourceDisksNames.x86]
+10000 = %Pro.Disk%,"",,\x86
+[SourceDisksNames.amd64]
+10000 = %Pro.Disk%,"",,\amd64
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Remove;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[DefaultUninstall.NT]
+DelReg    = AEDF.NT.DelReg
+Delfiles = AEDF.NT.DelFile
+
+;
+; Service uninstallation section
+;
+
+[AEDF.NT.DelReg]
+HKLM, System\CurrentControlSet\Control\Class\{4d36e965-e325-11ce-bfc1-08002be10318}, UpperFilters, 0x00018002, %Service_Name%
+
+[AEDF.NT.DelFile]
+%TargetFileName%.sys, , , 0x00000001 
+
+[DefaultUninstall.NT.Services]
+DelService = %Service_Name%, 0x200
+
+[Strings]
+LC         = "Hisense Corporation"
+Service_Name = "hsCDFiDrv"
+Service_Desc = "Hisense CD-ROM Filter Driver"
+Pro.Disk = "Hisense Filter Driver Installation Disk"
+TargetFileName = "hsCDFiDrv"

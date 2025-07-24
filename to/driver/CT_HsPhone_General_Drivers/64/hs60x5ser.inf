@@ -1,0 +1,939 @@
+; Windows Virtual Serial Port Setup File
+; Copyright (c) 2010 OEM Corporation
+; Manufacturer: OEM Corporation
+;
+
+[Version]
+signature  = "$WINDOWS NT$"
+Class      = Ports
+Provider   = %OEM%
+ClassGuid  = {4D36E978-E325-11CE-BFC1-08002BE10318}
+DriverVer  = 12/08/2011,2.0.6.7
+Catalogfile = hs60x5usbser.cat
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%OEM% = QcomSerialPort,NTamd64
+
+
+[SourceDisksFiles]
+hs60x5usbser.sys = 1000
+[SourceDisksNames.x86]
+1000 = %QcomSrcDisk%,"",,\x86
+[SourceDisksNames.amd64]
+1000 = %QcomSrcDisk%,"",,\amd64
+
+[QcomSerialPort]
+%HisenseDIAGDataCard%   = QportInstall00, USB\VID_109B&PID_9078&MI_01
+%HisenseNMEADataCard% = QportInstall00, USB\VID_109B&PID_9078&MI_02
+%HisensePCUIDataCard% = QportInstall00, USB\VID_109B&PID_9078&MI_03
+%HisenseSNDDataCard%  = QportInstall00, USB\VID_109B&PID_9078&MI_04
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9088&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9088&MI_02
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9089&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9089&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9089&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908A&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908A&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908A&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908B&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908B&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908B&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908C&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908C&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908C&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908D&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908D&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908D&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908E&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908E&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908E&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908F&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908F&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908F&MI_03
+
+%LeimoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_9090&MI_01
+%LeimoneNMEA% = QportInstall00, USB\VID_109B&PID_9090&MI_02
+%LeimonePCUI% = QportInstall00, USB\VID_109B&PID_9090&MI_03
+
+%CIYODIAG6k%   = QportInstall00, USB\VID_109B&PID_9091&MI_01
+%CIYONMEA% = QportInstall00, USB\VID_109B&PID_9091&MI_02
+%CIYOPCUI% = QportInstall00, USB\VID_109B&PID_9091&MI_03
+
+%SANMYDIAG6k%   = QportInstall00, USB\VID_109B&PID_9092&MI_01
+%SANMYNMEA% = QportInstall00, USB\VID_109B&PID_9092&MI_02
+%SANMYPCUI% = QportInstall00, USB\VID_109B&PID_9092&MI_03
+
+%GAOXINQIDIAG6k%   = QportInstall00, USB\VID_109B&PID_9093&MI_01
+%GAOXINQINMEA% = QportInstall00, USB\VID_109B&PID_9093&MI_02
+%GAOXINQIPCUI% = QportInstall00, USB\VID_109B&PID_9093&MI_03
+
+%ViewSonicDIAG6k%   = QportInstall00, USB\VID_109B&PID_9094&MI_01
+%ViewSonicNMEA% = QportInstall00, USB\VID_109B&PID_9094&MI_02
+%ViewSonicPCUI% = QportInstall00, USB\VID_109B&PID_9094&MI_03
+
+%HualuDIAG6k%   = QportInstall00, USB\VID_109B&PID_9095&MI_01
+%HualuNMEA% = QportInstall00, USB\VID_109B&PID_9095&MI_02
+%HualuPCUI% = QportInstall00, USB\VID_109B&PID_9095&MI_03
+
+%JEEPONTDIAG6k%   = QportInstall00, USB\VID_109B&PID_9096&MI_01
+%JEEPONTNMEA% = QportInstall00, USB\VID_109B&PID_9096&MI_02
+%JEEPONTPCUI% = QportInstall00, USB\VID_109B&PID_9096&MI_03
+
+%TONEWINDIAG6k%   = QportInstall00, USB\VID_109B&PID_9097&MI_01
+%TONEWINNMEA% = QportInstall00, USB\VID_109B&PID_9097&MI_02
+%TONEWINPCUI% = QportInstall00, USB\VID_109B&PID_9097&MI_03
+
+%XINZHONGQIAODIAG6k%   = QportInstall00, USB\VID_109B&PID_9098&MI_01
+%XINZHONGQIAONMEA% = QportInstall00, USB\VID_109B&PID_9098&MI_02
+%XINZHONGQIAOPCUI% = QportInstall00, USB\VID_109B&PID_9098&MI_03
+
+%ZHANEDIAG6k%   = QportInstall00, USB\VID_109B&PID_9099&MI_01
+%ZHANENMEA% = QportInstall00, USB\VID_109B&PID_9099&MI_02
+%ZHANEPCUI% = QportInstall00, USB\VID_109B&PID_9099&MI_03
+
+%NoVendorDIAG6k%   = QportInstall00, USB\VID_109B&PID_909A&MI_01
+%NoVendorNMEA% = QportInstall00, USB\VID_109B&PID_909A&MI_02
+%NoVendorPCUI% = QportInstall00, USB\VID_109B&PID_909A&MI_03
+
+%TONEWINDIAG6k%   = QportInstall00, USB\VID_109B&PID_909B&MI_01
+%TONEWINNMEA% = QportInstall00, USB\VID_109B&PID_909B&MI_02
+%TONEWINPCUI% = QportInstall00, USB\VID_109B&PID_909B&MI_03
+
+%BananaDIAG6k%   = QportInstall00, USB\VID_109B&PID_909C&MI_01
+%BananaNMEA% = QportInstall00, USB\VID_109B&PID_909C&MI_02
+%BananaPCUI% = QportInstall00, USB\VID_109B&PID_909C&MI_03
+
+%MicromaxDIAG6k%   = QportInstall00, USB\VID_109B&PID_909D&MI_01
+%MicromaxNMEA% = QportInstall00, USB\VID_109B&PID_909D&MI_02
+%MicromaxPCUI% = QportInstall00, USB\VID_109B&PID_909D&MI_03
+
+%SkyworthDIAG6k%   = QportInstall00, USB\VID_109B&PID_909E&MI_01
+%SkyworthNMEA% = QportInstall00, USB\VID_109B&PID_909E&MI_02
+%SkyworthPCUI% = QportInstall00, USB\VID_109B&PID_909E&MI_03
+
+%TwinDIAG6k%   = QportInstall00, USB\VID_109B&PID_909F&MI_01
+%TwinNMEA% = QportInstall00, USB\VID_109B&PID_909F&MI_02
+%TwinPCUI% = QportInstall00, USB\VID_109B&PID_909F&MI_03
+
+%SANHEXINDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A0&MI_01
+%SANHEXINNMEA% = QportInstall00, USB\VID_109B&PID_90A0&MI_02
+%SANHEXINPCUI% = QportInstall00, USB\VID_109B&PID_90A0&MI_03
+
+%yusunDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A1&MI_01
+%yusunNMEA% = QportInstall00, USB\VID_109B&PID_90A1&MI_02
+%yusunPCUI% = QportInstall00, USB\VID_109B&PID_90A1&MI_03
+
+%MiwingsDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A2&MI_01
+%MiwingsNMEA% = QportInstall00, USB\VID_109B&PID_90A2&MI_02
+%MiwingsPCUI% = QportInstall00, USB\VID_109B&PID_90A2&MI_03
+
+%DCTDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A4&MI_01
+%DCTNMEA% = QportInstall00, USB\VID_109B&PID_90A4&MI_02
+%DCTPCUI% = QportInstall00, USB\VID_109B&PID_90A4&MI_03
+
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A5&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A6&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A7&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A8&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A9&MI_01
+
+%SINOSTARDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AA&MI_01
+%SINOSTARNMEA% = QportInstall00, USB\VID_109B&PID_90AA&MI_02
+%SINOSTARPCUI% = QportInstall00, USB\VID_109B&PID_90AA&MI_03
+
+%SaihonDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AB&MI_01
+%SaihonNMEA% = QportInstall00, USB\VID_109B&PID_90AB&MI_02
+%SaihonPCUI% = QportInstall00, USB\VID_109B&PID_90AB&MI_03
+
+%DZDDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AC&MI_01
+%DZDNMEA% = QportInstall00, USB\VID_109B&PID_90AC&MI_02
+%DZDPCUI% = QportInstall00, USB\VID_109B&PID_90AC&MI_03
+
+%UNITONEDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AD&MI_01
+%UNITONENMEA% = QportInstall00, USB\VID_109B&PID_90AD&MI_02
+%UNITONEPCUI% = QportInstall00, USB\VID_109B&PID_90AD&MI_03
+
+%BRORDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AE&MI_01
+%BRORNMEA% = QportInstall00, USB\VID_109B&PID_90AE&MI_02
+%BRORPCUI% = QportInstall00, USB\VID_109B&PID_90AE&MI_03
+
+%NYGDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AF&MI_01
+%NYGNMEA% = QportInstall00, USB\VID_109B&PID_90AF&MI_02
+%NYGPCUI% = QportInstall00, USB\VID_109B&PID_90AF&MI_03
+
+%HTDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B0&MI_01
+%HTNMEA% = QportInstall00, USB\VID_109B&PID_90B0&MI_02
+%HTPCUI% = QportInstall00, USB\VID_109B&PID_90B0&MI_03
+
+%CHCDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B2&MI_00
+%CHCNMEA% = QportInstall00, USB\VID_109B&PID_90B2&MI_03
+%CHCPCUI% = QportInstall00, USB\VID_109B&PID_90B2&MI_04
+
+%yusunDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B3&MI_00
+%yusunNMEA% = QportInstall00, USB\VID_109B&PID_90B3&MI_03
+%yusunPCUI% = QportInstall00, USB\VID_109B&PID_90B3&MI_04
+
+%BRORDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B4&MI_00
+%BRORNMEA% = QportInstall00, USB\VID_109B&PID_90B4&MI_03
+%BRORPCUI% = QportInstall00, USB\VID_109B&PID_90B4&MI_04
+
+%GAOXINQIDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B5&MI_00
+%GAOXINQINMEA% = QportInstall00, USB\VID_109B&PID_90B5&MI_03
+%GAOXINQIPCUI% = QportInstall00, USB\VID_109B&PID_90B5&MI_04
+
+%CONORDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B6&MI_00
+%CONORNMEA% = QportInstall00, USB\VID_109B&PID_90B6&MI_03
+%CONORPCUI% = QportInstall00, USB\VID_109B&PID_90B6&MI_04
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B7&MI_00
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_90B7&MI_03
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_90B7&MI_04
+
+%ZHANEDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B8&MI_00
+%ZHANENMEA% = QportInstall00, USB\VID_109B&PID_90B8&MI_03
+%ZHANEPCUI% = QportInstall00, USB\VID_109B&PID_90B8&MI_04
+
+%TwinDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B9&MI_00
+%TwinNMEA% = QportInstall00, USB\VID_109B&PID_90B9&MI_03
+%TwinPCUI% = QportInstall00, USB\VID_109B&PID_90B9&MI_04
+
+%DZDDIAG6k%   = QportInstall00, USB\VID_109B&PID_90BA&MI_00
+%DZDNMEA% = QportInstall00, USB\VID_109B&PID_90BA&MI_03
+%DZDPCUI% = QportInstall00, USB\VID_109B&PID_90BA&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9100&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9100&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9100&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9101&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9101&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9101&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9102&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9102&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9102&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9103&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9103&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9103&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9104&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9104&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9104&MI_03
+
+%HisenseDIAG6kU2%   = QportInstall00, USB\VID_109B&PID_9110&MI_00
+%HisenseNMEAU2% = QportInstall00, USB\VID_109B&PID_9110&MI_03
+%HisensePCUIU2% = QportInstall00, USB\VID_109B&PID_9110&MI_04
+
+%HisenseDIAG6k0%   = QportInstall00, USB\VID_109B&PID_9111&MI_00
+%HisenseNMEA0% = QportInstall00, USB\VID_109B&PID_9111&MI_03
+%HisensePCUI0% = QportInstall00, USB\VID_109B&PID_9111&MI_04
+
+%MicromaxDIAG6k0%   = QportInstall00, USB\VID_109B&PID_9112&MI_00
+%MicromaxNMEA0% = QportInstall00, USB\VID_109B&PID_9112&MI_03
+%MicromaxPCUI0% = QportInstall00, USB\VID_109B&PID_9112&MI_04
+%MicromaxDIAG6k0%   = QportInstall00, USB\VID_109B&PID_9113&MI_00
+%MicromaxNMEA0% = QportInstall00, USB\VID_109B&PID_9113&MI_03
+%MicromaxPCUI0% = QportInstall00, USB\VID_109B&PID_9113&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9114&MI_00
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9114&MI_03
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9114&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9115&MI_00
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9115&MI_03
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9115&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_902E&MI_02
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109C&PID_9089&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109C&PID_9089&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109C&PID_9089&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5000&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5000&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5000&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5001&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5001&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5001&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5002&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5002&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5002&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5003&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5003&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5003&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5004&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5004&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5004&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5005&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5005&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5005&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5006&MI_00
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5006&MI_03
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5006&MI_04
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6000&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6000&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6000&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6001&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6001&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6001&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6002&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6002&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6002&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6003&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6003&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6003&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6004&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6004&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6004&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6005&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6005&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6005&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_0E8D&PID_0805&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_0E8D&PID_0805&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_0E8D&PID_0805&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7000&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7000&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7000&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7001&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7001&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7001&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7002&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7002&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7002&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7003&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7003&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7003&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7004&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7004&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7004&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7005&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7005&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7005&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_0E8D&PID_8112&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_0E8D&PID_8112&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_0E8D&PID_8112&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8000&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8000&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8000&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8001&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8001&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8001&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8002&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8002&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8002&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8003&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8003&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8003&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8004&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8004&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8004&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8005&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8005&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8005&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D612&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D612&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D612&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D613&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D613&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D613&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D812&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D812&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D812&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D813&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D813&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D813&MI_03
+
+%HUAWEIDIAG6k%   = QportInstall00, USB\VID_12D1&PID_1805&MI_01
+%HUAWEINMEA% = QportInstall00, USB\VID_12D1&PID_1805&MI_02
+%HUAWEIPCUI% = QportInstall00, USB\VID_12D1&PID_1805&MI_03
+
+[QcomSerialPort.NTamd64]
+%HisenseDIAGDataCard%   = QportInstall00, USB\VID_109B&PID_9078&MI_01
+%HisenseNMEADataCard% = QportInstall00, USB\VID_109B&PID_9078&MI_02
+%HisensePCUIDataCard% = QportInstall00, USB\VID_109B&PID_9078&MI_03
+%HisenseSNDDataCard%  = QportInstall00, USB\VID_109B&PID_9078&MI_04
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9088&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9088&MI_02
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9089&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9089&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9089&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908A&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908A&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908A&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908B&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908B&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908B&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908C&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908C&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908C&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908D&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908D&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908D&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908E&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908E&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908E&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_908F&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_908F&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_908F&MI_03
+
+%LeimoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_9090&MI_01
+%LeimoneNMEA% = QportInstall00, USB\VID_109B&PID_9090&MI_02
+%LeimonePCUI% = QportInstall00, USB\VID_109B&PID_9090&MI_03
+
+%CIYODIAG6k%   = QportInstall00, USB\VID_109B&PID_9091&MI_01
+%CIYONMEA% = QportInstall00, USB\VID_109B&PID_9091&MI_02
+%CIYOPCUI% = QportInstall00, USB\VID_109B&PID_9091&MI_03
+
+%SANMYDIAG6k%   = QportInstall00, USB\VID_109B&PID_9092&MI_01
+%SANMYNMEA% = QportInstall00, USB\VID_109B&PID_9092&MI_02
+%SANMYPCUI% = QportInstall00, USB\VID_109B&PID_9092&MI_03
+
+%GAOXINQIDIAG6k%   = QportInstall00, USB\VID_109B&PID_9093&MI_01
+%GAOXINQINMEA% = QportInstall00, USB\VID_109B&PID_9093&MI_02
+%GAOXINQIPCUI% = QportInstall00, USB\VID_109B&PID_9093&MI_03
+
+%ViewSonicDIAG6k%   = QportInstall00, USB\VID_109B&PID_9094&MI_01
+%ViewSonicNMEA% = QportInstall00, USB\VID_109B&PID_9094&MI_02
+%ViewSonicPCUI% = QportInstall00, USB\VID_109B&PID_9094&MI_03
+
+%HualuDIAG6k%   = QportInstall00, USB\VID_109B&PID_9095&MI_01
+%HualuNMEA% = QportInstall00, USB\VID_109B&PID_9095&MI_02
+%HualuPCUI% = QportInstall00, USB\VID_109B&PID_9095&MI_03
+
+%JEEPONTDIAG6k%   = QportInstall00, USB\VID_109B&PID_9096&MI_01
+%JEEPONTNMEA% = QportInstall00, USB\VID_109B&PID_9096&MI_02
+%JEEPONTPCUI% = QportInstall00, USB\VID_109B&PID_9096&MI_03
+
+%TONEWINDIAG6k%   = QportInstall00, USB\VID_109B&PID_9097&MI_01
+%TONEWINNMEA% = QportInstall00, USB\VID_109B&PID_9097&MI_02
+%TONEWINPCUI% = QportInstall00, USB\VID_109B&PID_9097&MI_03
+
+%XINZHONGQIAODIAG6k%   = QportInstall00, USB\VID_109B&PID_9098&MI_01
+%XINZHONGQIAONMEA% = QportInstall00, USB\VID_109B&PID_9098&MI_02
+%XINZHONGQIAOPCUI% = QportInstall00, USB\VID_109B&PID_9098&MI_03
+
+%ZHANEDIAG6k%   = QportInstall00, USB\VID_109B&PID_9099&MI_01
+%ZHANENMEA% = QportInstall00, USB\VID_109B&PID_9099&MI_02
+%ZHANEPCUI% = QportInstall00, USB\VID_109B&PID_9099&MI_03
+
+%NoVendorDIAG6k%   = QportInstall00, USB\VID_109B&PID_909A&MI_01
+%NoVendorNMEA% = QportInstall00, USB\VID_109B&PID_909A&MI_02
+%NoVendorPCUI% = QportInstall00, USB\VID_109B&PID_909A&MI_03
+
+%TONEWINDIAG6k%   = QportInstall00, USB\VID_109B&PID_909B&MI_01
+%TONEWINNMEA% = QportInstall00, USB\VID_109B&PID_909B&MI_02
+%TONEWINPCUI% = QportInstall00, USB\VID_109B&PID_909B&MI_03
+
+%BananaDIAG6k%   = QportInstall00, USB\VID_109B&PID_909C&MI_01
+%BananaNMEA% = QportInstall00, USB\VID_109B&PID_909C&MI_02
+%BananaPCUI% = QportInstall00, USB\VID_109B&PID_909C&MI_03
+
+%MicromaxDIAG6k%   = QportInstall00, USB\VID_109B&PID_909D&MI_01
+%MicromaxNMEA% = QportInstall00, USB\VID_109B&PID_909D&MI_02
+%MicromaxPCUI% = QportInstall00, USB\VID_109B&PID_909D&MI_03
+
+%SkyworthDIAG6k%   = QportInstall00, USB\VID_109B&PID_909E&MI_01
+%SkyworthNMEA% = QportInstall00, USB\VID_109B&PID_909E&MI_02
+%SkyworthPCUI% = QportInstall00, USB\VID_109B&PID_909E&MI_03
+
+%TwinDIAG6k%   = QportInstall00, USB\VID_109B&PID_909F&MI_01
+%TwinNMEA% = QportInstall00, USB\VID_109B&PID_909F&MI_02
+%TwinPCUI% = QportInstall00, USB\VID_109B&PID_909F&MI_03
+
+%SANHEXINDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A0&MI_01
+%SANHEXINNMEA% = QportInstall00, USB\VID_109B&PID_90A0&MI_02
+%SANHEXINPCUI% = QportInstall00, USB\VID_109B&PID_90A0&MI_03
+
+%yusunDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A1&MI_01
+%yusunNMEA% = QportInstall00, USB\VID_109B&PID_90A1&MI_02
+%yusunPCUI% = QportInstall00, USB\VID_109B&PID_90A1&MI_03
+
+%MiwingsDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A2&MI_01
+%MiwingsNMEA% = QportInstall00, USB\VID_109B&PID_90A2&MI_02
+%MiwingsPCUI% = QportInstall00, USB\VID_109B&PID_90A2&MI_03
+
+%DCTDIAG6k%   = QportInstall00, USB\VID_109B&PID_90A4&MI_01
+%DCTNMEA% = QportInstall00, USB\VID_109B&PID_90A4&MI_02
+%DCTPCUI% = QportInstall00, USB\VID_109B&PID_90A4&MI_03
+
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A5&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A6&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A7&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A8&MI_01
+%QUALDIAG%   = QportInstall00, USB\VID_109B&PID_90A9&MI_01
+
+%SINOSTARDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AA&MI_01
+%SINOSTARNMEA% = QportInstall00, USB\VID_109B&PID_90AA&MI_02
+%SINOSTARPCUI% = QportInstall00, USB\VID_109B&PID_90AA&MI_03
+
+%SaihonDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AB&MI_01
+%SaihonNMEA% = QportInstall00, USB\VID_109B&PID_90AB&MI_02
+%SaihonPCUI% = QportInstall00, USB\VID_109B&PID_90AB&MI_03
+
+%DZDDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AC&MI_01
+%DZDNMEA% = QportInstall00, USB\VID_109B&PID_90AC&MI_02
+%DZDPCUI% = QportInstall00, USB\VID_109B&PID_90AC&MI_03
+
+%UNITONEDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AD&MI_01
+%UNITONENMEA% = QportInstall00, USB\VID_109B&PID_90AD&MI_02
+%UNITONEPCUI% = QportInstall00, USB\VID_109B&PID_90AD&MI_03
+
+%BRORDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AE&MI_01
+%BRORNMEA% = QportInstall00, USB\VID_109B&PID_90AE&MI_02
+%BRORPCUI% = QportInstall00, USB\VID_109B&PID_90AE&MI_03
+
+%NYGDIAG6k%   = QportInstall00, USB\VID_109B&PID_90AF&MI_01
+%NYGNMEA% = QportInstall00, USB\VID_109B&PID_90AF&MI_02
+%NYGPCUI% = QportInstall00, USB\VID_109B&PID_90AF&MI_03
+
+%HTDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B0&MI_01
+%HTNMEA% = QportInstall00, USB\VID_109B&PID_90B0&MI_02
+%HTPCUI% = QportInstall00, USB\VID_109B&PID_90B0&MI_03
+
+%CHCDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B2&MI_00
+%CHCNMEA% = QportInstall00, USB\VID_109B&PID_90B2&MI_03
+%CHCPCUI% = QportInstall00, USB\VID_109B&PID_90B2&MI_04
+
+%yusunDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B3&MI_00
+%yusunNMEA% = QportInstall00, USB\VID_109B&PID_90B3&MI_03
+%yusunPCUI% = QportInstall00, USB\VID_109B&PID_90B3&MI_04
+
+%BRORDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B4&MI_00
+%BRORNMEA% = QportInstall00, USB\VID_109B&PID_90B4&MI_03
+%BRORPCUI% = QportInstall00, USB\VID_109B&PID_90B4&MI_04
+
+%GAOXINQIDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B5&MI_00
+%GAOXINQINMEA% = QportInstall00, USB\VID_109B&PID_90B5&MI_03
+%GAOXINQIPCUI% = QportInstall00, USB\VID_109B&PID_90B5&MI_04
+
+%CONORDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B6&MI_00
+%CONORNMEA% = QportInstall00, USB\VID_109B&PID_90B6&MI_03
+%CONORPCUI% = QportInstall00, USB\VID_109B&PID_90B6&MI_04
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B7&MI_00
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_90B7&MI_03
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_90B7&MI_04
+
+%ZHANEDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B8&MI_00
+%ZHANENMEA% = QportInstall00, USB\VID_109B&PID_90B8&MI_03
+%ZHANEPCUI% = QportInstall00, USB\VID_109B&PID_90B8&MI_04
+
+%TwinDIAG6k%   = QportInstall00, USB\VID_109B&PID_90B9&MI_00
+%TwinNMEA% = QportInstall00, USB\VID_109B&PID_90B9&MI_03
+%TwinPCUI% = QportInstall00, USB\VID_109B&PID_90B9&MI_04
+
+%DZDDIAG6k%   = QportInstall00, USB\VID_109B&PID_90BA&MI_00
+%DZDNMEA% = QportInstall00, USB\VID_109B&PID_90BA&MI_03
+%DZDPCUI% = QportInstall00, USB\VID_109B&PID_90BA&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9100&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9100&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9100&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9101&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9101&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9101&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9102&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9102&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9102&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9103&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9103&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9103&MI_03
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9104&MI_01
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9104&MI_02
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9104&MI_03
+
+%HisenseDIAG6kU2%   = QportInstall00, USB\VID_109B&PID_9110&MI_00
+%HisenseNMEAU2% = QportInstall00, USB\VID_109B&PID_9110&MI_03
+%HisensePCUIU2% = QportInstall00, USB\VID_109B&PID_9110&MI_04
+
+%HisenseDIAG6k0%   = QportInstall00, USB\VID_109B&PID_9111&MI_00
+%HisenseNMEA0% = QportInstall00, USB\VID_109B&PID_9111&MI_03
+%HisensePCUI0% = QportInstall00, USB\VID_109B&PID_9111&MI_04
+
+%MicromaxDIAG6k0%   = QportInstall00, USB\VID_109B&PID_9112&MI_00
+%MicromaxNMEA0% = QportInstall00, USB\VID_109B&PID_9112&MI_03
+%MicromaxPCUI0% = QportInstall00, USB\VID_109B&PID_9112&MI_04
+%MicromaxDIAG6k0%   = QportInstall00, USB\VID_109B&PID_9113&MI_00
+%MicromaxNMEA0% = QportInstall00, USB\VID_109B&PID_9113&MI_03
+%MicromaxPCUI0% = QportInstall00, USB\VID_109B&PID_9113&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9114&MI_00
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9114&MI_03
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9114&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_9115&MI_00
+%HisenseNMEA% = QportInstall00, USB\VID_109B&PID_9115&MI_03
+%HisensePCUI% = QportInstall00, USB\VID_109B&PID_9115&MI_04
+
+%HisenseDIAG6k%   = QportInstall00, USB\VID_109B&PID_902E&MI_02
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109C&PID_9089&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109C&PID_9089&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109C&PID_9089&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5000&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5000&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5000&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5001&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5001&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5001&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5002&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5002&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5002&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5003&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5003&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5003&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5004&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5004&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5004&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5005&MI_01
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5005&MI_02
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5005&MI_03
+
+%EPhoneDIAG6k%   = QportInstall00, USB\VID_109B&PID_5006&MI_00
+%EPhoneNMEA% = QportInstall00, USB\VID_109B&PID_5006&MI_03
+%EPhonePCUI% = QportInstall00, USB\VID_109B&PID_5006&MI_04
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6000&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6000&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6000&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6001&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6001&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6001&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6002&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6002&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6002&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6003&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6003&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6003&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6004&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6004&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6004&MI_03
+
+%HESENSDIAG6k%   = QportInstall00, USB\VID_109B&PID_6005&MI_01
+%HESENSNMEA% = QportInstall00, USB\VID_109B&PID_6005&MI_02
+%HESENSPCUI% = QportInstall00, USB\VID_109B&PID_6005&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_0E8D&PID_0805&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_0E8D&PID_0805&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_0E8D&PID_0805&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7000&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7000&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7000&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7001&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7001&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7001&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7002&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7002&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7002&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7003&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7003&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7003&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7004&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7004&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7004&MI_03
+
+%KonkaDIAG6k%   = QportInstall00, USB\VID_109B&PID_7005&MI_01
+%KonkaNMEA% = QportInstall00, USB\VID_109B&PID_7005&MI_02
+%KonkaPCUI% = QportInstall00, USB\VID_109B&PID_7005&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_0E8D&PID_8112&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_0E8D&PID_8112&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_0E8D&PID_8112&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8000&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8000&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8000&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8001&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8001&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8001&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8002&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8002&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8002&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8003&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8003&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8003&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8004&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8004&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8004&MI_03
+
+%K-TouchDIAG6k%   = QportInstall00, USB\VID_109B&PID_8005&MI_01
+%K-TouchNMEA% = QportInstall00, USB\VID_109B&PID_8005&MI_02
+%K-TouchPCUI% = QportInstall00, USB\VID_109B&PID_8005&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D612&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D612&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D612&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D613&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D613&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D613&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D812&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D812&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D812&MI_03
+
+%PhilipsDIAG6k%   = QportInstall00, USB\VID_0471&PID_D813&MI_01
+%PhilipsNMEA% = QportInstall00, USB\VID_0471&PID_D813&MI_02
+%PhilipsPCUI% = QportInstall00, USB\VID_0471&PID_D813&MI_03
+
+%HUAWEIDIAG6k%   = QportInstall00, USB\VID_12D1&PID_1805&MI_01
+%HUAWEINMEA% = QportInstall00, USB\VID_12D1&PID_1805&MI_02
+%HUAWEIPCUI% = QportInstall00, USB\VID_12D1&PID_1805&MI_03
+
+[QportInstall00.NT]
+CopyFiles=QCUsbDriverFiles
+AddReg = All00, AddReg
+
+[QCUsbDriverFiles]
+hs60x5usbser.sys
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[QportInstall00.NT.Services]
+AddService=OEM,  0x00000002, QC_USBSerialService
+
+[QC_USBSerialService]
+DisplayName   = "USB Modem and USB Serial"
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\hs60x5usbser.sys
+
+[All00]
+HKR,,NTMPDriver,,hs60x5usbser.sys
+
+[AddReg]
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+;HKR,,QCDriverConfig, 0x00010001, 0x00000001		;overflow continue enable
+;HKR,,QCDriverConfig, 0x00010001, 0x80000001	;debug enable
+;HKR,,QCDriverLoggingDirectory,,"\??\C:\"			;debug log
+
+[Strings]
+QCUSBSER = "USB Device for Legacy Serial Communication"
+QcomSrcDisk = "USB Driver Disk"
+OEM   = "OEM"
+HisenseDIAGDataCard = "Hisense EVDO Diagnostics Interface"
+HisenseNMEADataCard   = "Hisense EVDO NMEA Device"
+HisenseSNDDataCard    = "Hisense EVDO SND Device"
+HisensePCUIDataCard   = "Hisense EVDO PCUI Device"
+HisenseDIAG6k = "Hisense 1xEVDO Diagnostics Interface"
+HisenseNMEA   = "Hisense 1xEVDO NMEA Device"
+HisenseSND    = "Hisense 1xEVDO SND Device"
+HisensePCUI   = "Hisense 1xEVDO PCUI Device"
+HisenseDIAG6k0 = "Hisense Diagnostics Interface"
+HisenseNMEA0   = "Hisense NMEA Device"
+HisensePCUI0   = "Hisense PCUI Device"
+HisenseDIAG6kU2 = "U2 Diagnostics Interface"
+HisenseNMEAU2   = "U2 NMEA Device"
+HisensePCUIU2   = "U2 PCUI Device"
+LeimoneDIAG6k = "Leimone 1xEVDO Diagnostics Interface"
+LeimoneNMEA   = "Leimone 1xEVDO NMEA Device"
+LeimoneSND    = "Leimone 1xEVDO SND Device"
+LeimonePCUI   = "Leimone 1xEVDO PCUI Device"
+CIYODIAG6k = "CIYO 1xEVDO Diagnostics Interface"
+CIYONMEA   = "CIYO 1xEVDO NMEA Device"
+CIYOSND    = "CIYO 1xEVDO SND Device"
+CIYOPCUI   = "CIYO 1xEVDO PCUI Device"
+SANMYDIAG6k = "SANMY 1xEVDO Diagnostics Interface"
+SANMYNMEA   = "SANMY 1xEVDO NMEA Device"
+SANMYSND    = "SANMY 1xEVDO SND Device"
+SANMYPCUI   = "SANMY 1xEVDO PCUI Device"
+GAOXINQIDIAG6k = "GAOXINQI 1xEVDO Diagnostics Interface"
+GAOXINQINMEA   = "GAOXINQI 1xEVDO NMEA Device"
+GAOXINQISND    = "GAOXINQI 1xEVDO SND Device"
+GAOXINQIPCUI   = "GAOXINQI 1xEVDO PCUI Device"
+ViewSonicDIAG6k = "ViewSonic 1xEVDO Diagnostics Interface"
+ViewSonicNMEA   = "ViewSonic 1xEVDO NMEA Device"
+ViewSonicSND    = "ViewSonic 1xEVDO SND Device"
+ViewSonicPCUI   = "ViewSonic 1xEVDO PCUI Device"
+EPhoneDIAG6k = "EPhone 1xEVDO Diagnostics Interface"
+EPhoneNMEA   = "EPhone 1xEVDO NMEA Device"
+EPhoneSND    = "EPhone 1xEVDO SND Device"
+EPhonePCUI   = "EPhone 1xEVDO PCUI Device"
+KonkaDIAG6k = "Konka 1xEVDO Diagnostics Interface"
+KonkaNMEA   = "Konka 1xEVDO NMEA Device"
+KonkaSND    = "Konka 1xEVDO SND Device"
+KonkaPCUI   = "Konka 1xEVDO PCUI Device"
+K-TouchDIAG6k = "K-Touch 1xEVDO Diagnostics Interface"
+K-TouchNMEA   = "K-Touch 1xEVDO NMEA Device"
+K-TouchSND    = "K-Touch 1xEVDO SND Device"
+K-TouchPCUI   = "K-Touch 1xEVDO PCUI Device"
+PhilipsDIAG6k = "Philips 1xEVDO Diagnostics Interface"
+PhilipsNMEA   = "Philips 1xEVDO NMEA Device"
+PhilipsSND    = "Philips 1xEVDO SND Device"
+PhilipsPCUI   = "Philips 1xEVDO PCUI Device"
+HualuDIAG6k = "Hualu 1xEVDO Diagnostics Interface"
+HualuNMEA   = "Hualu 1xEVDO NMEA Device"
+HualuSND    = "Hualu 1xEVDO SND Device"
+HualuPCUI   = "Hualu 1xEVDO PCUI Device"
+JEEPONTDIAG6k = "JEEPONT 1xEVDO Diagnostics Interface"
+JEEPONTNMEA   = "JEEPONT 1xEVDO NMEA Device"
+JEEPONTSND    = "JEEPONT 1xEVDO SND Device"
+JEEPONTPCUI   = "JEEPONT 1xEVDO PCUI Device"
+TONEWINDIAG6k = "TONEWIN 1xEVDO Diagnostics Interface"
+TONEWINNMEA   = "TONEWIN 1xEVDO NMEA Device"
+TONEWINSND    = "TONEWIN 1xEVDO SND Device"
+TONEWINPCUI   = "TONEWIN 1xEVDO PCUI Device"
+XINZHONGQIAODIAG6k = "XINZHONGQIAO 1xEVDO Diagnostics Interface"
+XINZHONGQIAONMEA   = "XINZHONGQIAO 1xEVDO NMEA Device"
+XINZHONGQIAOSND    = "XINZHONGQIAO 1xEVDO SND Device"
+XINZHONGQIAOPCUI   = "XINZHONGQIAO 1xEVDO PCUI Device"
+ZHANEDIAG6k = "ZHANE 1xEVDO Diagnostics Interface"
+ZHANENMEA   = "ZHANE 1xEVDO NMEA Device"
+ZHANESND    = "ZHANE 1xEVDO SND Device"
+ZHANEPCUI   = "ZHANE 1xEVDO PCUI Device"
+NoVendorDIAG6k = "NV 1xEVDO Diagnostics Interface"
+NoVendorNMEA   = "NV 1xEVDO NMEA Device"
+NoVendorSND    = "NV 1xEVDO SND Device"
+NoVendorPCUI   = "NV 1xEVDO PCUI Device"
+HUAWEIDIAG6k = "HUAWEI 1xEVDO Diagnostics Interface"
+HUAWEINMEA   = "HUAWEI 1xEVDO NMEA Device"
+HUAWEISND    = "HUAWEI 1xEVDO SND Device"
+HUAWEIPCUI   = "HUAWEI 1xEVDO PCUI Device"
+HESENSDIAG6k = "HESENS 1xEVDO Diagnostics Interface"
+HESENSNMEA   = "HESENS 1xEVDO NMEA Device"
+HESENSSND    = "HESENS 1xEVDO SND Device"
+HESENSPCUI   = "HESENS 1xEVDO PCUI Device"
+BananaDIAG6k = "Banana 1xEVDO Diagnostics Interface"
+BananaNMEA   = "Banana 1xEVDO NMEA Device"
+BananaSND    = "Banana 1xEVDO SND Device"
+BananaPCUI   = "Banana 1xEVDO PCUI Device"
+SkyworthDIAG6k = "Skyworth 1xEVDO Diagnostics Interface"
+SkyworthNMEA   = "Skyworth 1xEVDO NMEA Device"
+SkyworthSND    = "Skyworth 1xEVDO SND Device"
+SkyworthPCUI   = "Skyworth 1xEVDO PCUI Device"
+TwinDIAG6k = "Twin 1xEVDO Diagnostics Interface"
+TwinNMEA   = "Twin 1xEVDO NMEA Device"
+TwinSND    = "Twin 1xEVDO SND Device"
+TwinPCUI   = "Twin 1xEVDO PCUI Device"
+SANHEXINDIAG6k = "SANHEXIN 1xEVDO Diagnostics Interface"
+SANHEXINNMEA   = "SANHEXIN 1xEVDO NMEA Device"
+SANHEXINSND    = "SANHEXIN 1xEVDO SND Device"
+SANHEXINPCUI   = "SANHEXIN 1xEVDO PCUI Device"
+yusunDIAG6k = "yusun 1xEVDO Diagnostics Interface"
+yusunNMEA   = "yusun 1xEVDO NMEA Device"
+yusunSND    = "yusun 1xEVDO SND Device"
+yusunPCUI   = "yusun 1xEVDO PCUI Device"
+MicromaxDIAG6k = "Micromax 1xEVDO Diagnostics Interface"
+MicromaxNMEA   = "Micromax 1xEVDO NMEA Device"
+MicromaxSND    = "Micromax 1xEVDO SND Device"
+MicromaxPCUI   = "Micromax 1xEVDO PCUI Device"
+MicromaxDIAG6k0 = "Micromax Diagnostics Interface"
+MicromaxNMEA0   = "Micromax NMEA Device"
+MicromaxSND0    = "Micromax SND Device"
+MicromaxPCUI0   = "Micromax PCUI Device"
+MiwingsDIAG6k = "Miwings 1xEVDO Diagnostics Interface"
+MiwingsNMEA   = "Miwings 1xEVDO NMEA Device"
+MiwingsSND    = "Miwings 1xEVDO SND Device"
+MiwingsPCUI   = "Miwings 1xEVDO PCUI Device"
+DCTDIAG6k = "DCT 1xEVDO Diagnostics Interface"
+DCTNMEA   = "DCT 1xEVDO NMEA Device"
+DCTSND    = "DCT 1xEVDO SND Device"
+DCTPCUI   = "DCT 1xEVDO PCUI Device"
+QUALDIAG = "QUAL Diagnostics Interface"
+SINOSTARDIAG6k = "SINOSTAR 1xEVDO Diagnostics Interface"
+SINOSTARNMEA   = "SINOSTAR 1xEVDO NMEA Device"
+SINOSTARSND    = "SINOSTAR 1xEVDO SND Device"
+SINOSTARPCUI   = "SINOSTAR 1xEVDO PCUI Device"
+SaihonDIAG6k = "Saihon 1xEVDO Diagnostics Interface"
+SaihonNMEA   = "Saihon 1xEVDO NMEA Device"
+SaihonSND    = "Saihon 1xEVDO SND Device"
+SaihonPCUI   = "Saihon 1xEVDO PCUI Device"
+DZDDIAG6k = "DZD 1xEVDO Diagnostics Interface"
+DZDNMEA   = "DZD 1xEVDO NMEA Device"
+DZDSND    = "DZD 1xEVDO SND Device"
+DZDPCUI   = "DZD 1xEVDO PCUI Device"
+UNITONEDIAG6k = "UNITONE 1xEVDO Diagnostics Interface"
+UNITONENMEA   = "UNITONE 1xEVDO NMEA Device"
+UNITONESND    = "UNITONE 1xEVDO SND Device"
+UNITONEPCUI   = "UNITONE 1xEVDO PCUI Device"
+BRORDIAG6k = "BROR 1xEVDO Diagnostics Interface"
+BRORNMEA   = "BROR 1xEVDO NMEA Device"
+BRORSND    = "BROR 1xEVDO SND Device"
+BRORPCUI   = "BROR 1xEVDO PCUI Device"
+NYGDIAG6k = "NYG 1xEVDO Diagnostics Interface"
+NYGNMEA   = "NYG 1xEVDO NMEA Device"
+NYGSND    = "NYG 1xEVDO SND Device"
+NYGPCUI   = "NYG 1xEVDO PCUI Device"
+CHCDIAG6k = "CH-C 1xEVDO Diagnostics Interface"
+CHCNMEA   = "CH-C 1xEVDO NMEA Device"
+CHCPCUI   = "CH-C 1xEVDO PCUI Device"
+HTDIAG6k = "HT 1xEVDO Diagnostics Interface"
+HTNMEA   = "HT 1xEVDO NMEA Device"
+HTPCUI   = "HT 1xEVDO PCUI Device"
+CONORDIAG6k = "conor 1xEVDO Diagnostics Interface"
+CONORNMEA   = "conor 1xEVDO NMEA Device"
+CONORPCUI   = "conor 1xEVDO PCUI Device"
